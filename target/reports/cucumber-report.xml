@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.145" tests="22" skipped="0" failures="0" errors="0" timestamp="2026-11-24T20:37:03.070251300Z">
+<testcase classname="user registration" name="register with a unique username" time="0.007">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a unique username................................passed
+Then the registration should succeed........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="register with an existing username" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with an existing username.............................passed
+Then the registration should fail...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="Validate username length - #1.1" time="0.002">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a username "Chri1"...............................passed
+Then the username validation should be "valid"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="Validate username length - #1.2" time="0.0">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a username "Christian12345678909876543212".......passed
+Then the username validation should be "valid"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="Validate username length - #1.3" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a username "Christian123456789098765432123"......passed
+Then the username validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="Validate username length - #1.4" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a username "chr1"................................passed
+Then the username validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="Validate password length - #1.1" time="0.0">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "Chri1"...............................passed
+Then the password validation should be "valid"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="Validate password length - #1.2" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "christian12345678909876543212".......passed
+Then the password validation should be "valid"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="Validate password length - #1.3" time="0.0">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "christian123456789098765432123"......passed
+Then the password validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="Validate password length - #1.4" time="0.0">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "chr1"................................passed
+Then the password validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate is user starts with a letter - #1.1" time="0.003">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a username "Chris123"............................passed
+Then the username validation should be "valid"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate is user starts with a letter - #1.2" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a username "1Chris"..............................passed
+Then the username validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate is user starts with a letter - #1.3" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a username "-Chris"..............................passed
+Then the username validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate a password starts with a letter - #1.1" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "Chris123"............................passed
+Then the password validation should be "valid"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate a password starts with a letter - #1.2" time="0.0">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "1Chris"..............................passed
+Then the password validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate a password starts with a letter - #1.3" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "-Chris1".............................passed
+Then the password validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate allowed username characters - #1.1" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a username "Chris_-123"..........................passed
+Then the username validation should be "valid"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate allowed username characters - #1.2" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a username "Chris_-123@".........................passed
+Then the username validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate password requirements - #1.1" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "Chris123"............................passed
+Then the password validation should be "valid"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate password requirements - #1.2" time="0.0">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "Chris123@"...........................passed
+Then the password validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate that - and _ are allowed - #1.1" time="0.0">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "Chris_-123"..........................passed
+Then the password validation should be "valid"..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user registration" name="validate that - and _ are allowed - #1.2" time="0.001">
+<system-out><![CDATA[
+Given the registration system is available..................................passed
+When a user registers with a password "Chris_-123@".........................passed
+Then the password validation should be "invalid"............................passed
+]]></system-out>
+</testcase>
+</testsuite>
